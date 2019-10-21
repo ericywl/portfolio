@@ -11,7 +11,7 @@ const About = () => (
       <img src={bash} alt="About" />
     </Thumbnail>
     <Details>
-      <h1>About Myself</h1>
+      <h2>About Myself</h2>
       {about.map(({ id, text }) => (
         <p id={id}>{text}</p>
       ))}

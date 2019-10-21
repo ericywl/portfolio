@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 export const OuterWrapper = styled.div`
   padding-bottom: 2rem;
@@ -13,6 +13,11 @@ export const InnerWrapper = styled.div`
   @media (max-width: 960px) {
     flex-direction: column;
   }
+`
+
+const blinkCaret = keyframes`
+  from, to { color: transparent }
+  50% { color: #707070; }
 `
 
 export const Details = styled.div`
@@ -41,6 +46,10 @@ export const Details = styled.div`
 
     @media (max-width: 680px) {
       font-size: 26pt;
+    }
+
+    span {
+      animation: ${blinkCaret} 0.75s step-end infinite;
     }
   }
 `

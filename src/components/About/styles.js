@@ -20,7 +20,7 @@ export const Details = styled.div`
     width: 100%;
   }
 
-  h1 {
+  h2 {
     margin-bottom: 2rem;
     font-size: 26pt;
     color: #212121;

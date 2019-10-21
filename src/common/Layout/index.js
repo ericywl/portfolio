@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import { Global } from "./styles"
-import Footer from "Components/Footer"
+import Footer from "Common/Footer"
 import "./fonts.css"
 
 const Layout = ({ children }) => {

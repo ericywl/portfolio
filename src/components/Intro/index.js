@@ -1,6 +1,6 @@
 import React from "react"
 
-import Header from "Components/Header"
+import Header from "Common/Header"
 import { Container } from "Common/Container"
 import {
   OuterWrapper,
@@ -19,7 +19,7 @@ const Intro = () => (
       <Details>
         <h1>{welcome}!</h1>
         <h4>
-          I'm {name} and I'm {intro}.
+          I'm {name} and I'm {intro}. <span>|</span>
         </h4>
         <Socials>
           {socials.map(({ id, name, link, icon }) => (
