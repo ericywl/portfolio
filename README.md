@@ -1,6 +1,9 @@
-# ericywl's Portfolio
+# ericywl's portfolio
+
+Created using Gatsby.
 
 ## 🚀 Quick start
+
 1.  **Start developing.**
 
     ```shell
