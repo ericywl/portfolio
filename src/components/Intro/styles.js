@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.div`
+export const OuterWrapper = styled.div`
+  padding-bottom: 4rem;
+`
+
+export const InnerWrapper = styled.div`
   padding: 4rem 0;
   display: flex;
   align-items: center;
@@ -34,7 +38,7 @@ export const Details = styled.div`
     font-size: 32pt;
     font-weight: normal;
     color: #707070;
-    
+
     @media (max-width: 680px) {
       font-size: 26pt;
     }
@@ -43,11 +47,11 @@ export const Details = styled.div`
 
 export const Thumbnail = styled.div`
   flex: 1;
-  
+
   @media (max-width: 960px) {
     width: 100%;
   }
-  
+
   img {
     width: 100%;
   }

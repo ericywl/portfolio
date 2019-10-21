@@ -6,12 +6,12 @@
 
 // You can delete this file if you're not using it
 
-exports.onCreateWebpackConfig = ({actions}) => {
+exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
-        Data: `${__dirname}/data/config`
-      }
-    }
+        Data: `${__dirname}/data/config`,
+      },
+    },
   })
 }
