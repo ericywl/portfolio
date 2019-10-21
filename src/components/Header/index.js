@@ -5,13 +5,13 @@ import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { Wrapper, Navbar, SideLinks } from "./styles"
 import { title } from "Data"
-import { Container } from "../../common/Container"
-import icon from "../../images/icon.png"
+import { Container } from "Common/Container"
+import icon from "Static/icons/robot.png"
 
 const Header = () => (
   <Wrapper>
     <Navbar as={Container}>
-      <Link to="/"><img src={icon} width="70px" /></Link>
+      <Link to="/"><img src={icon} width="70px" alt="Icon" /></Link>
       <SideLinks>
         <AnchorLink href="#about">About</AnchorLink>
         <AnchorLink href="#projects">Projects</AnchorLink>

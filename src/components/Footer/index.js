@@ -1,6 +1,6 @@
 import React from "react"
 import { Wrapper, Details, Flex, Socials } from "./styles"
-import { Container } from "../../common/Container"
+import { Container } from "Common/Container"
 
 const Footer = () => (
   <Wrapper>

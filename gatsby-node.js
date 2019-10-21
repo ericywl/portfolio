@@ -11,6 +11,9 @@ exports.onCreateWebpackConfig = ({ actions }) => {
     resolve: {
       alias: {
         Data: `${__dirname}/data/config`,
+        Components: `${__dirname}/src/components/`,
+        Common: `${__dirname}/src/common/`,
+        Static: `${__dirname}/static/`
       },
     },
   })

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import footer from "../../images/footer.svg"
+import footer from "Static/images/footer.svg"
 
 export const Wrapper = styled.div`
   padding: 28rem 0 4rem 0;

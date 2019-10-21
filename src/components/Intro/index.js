@@ -1,10 +1,10 @@
 import React from "react"
-import hero from "../../images/hero.svg"
 
 import Header from "../Header"
-import { Container } from "../../common/Container"
+import { Container } from "Common/Container"
 import { OuterWrapper, InnerWrapper, Details, Thumbnail } from "./styles"
 import { welcome, name, description } from "Data"
+import hero from "Static/images/hero.svg"
 
 const Intro = () => (
   <OuterWrapper>
