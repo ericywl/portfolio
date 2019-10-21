@@ -1,11 +1,7 @@
 import styled, { keyframes } from "styled-components"
 
-export const OuterWrapper = styled.div`
-  padding-bottom: 2rem;
-`
-
-export const InnerWrapper = styled.div`
-  padding: 4rem 0;
+export const Wrapper = styled.div`
+  padding: 5rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;

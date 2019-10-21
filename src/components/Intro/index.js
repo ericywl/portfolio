@@ -1,10 +1,8 @@
 import React from "react"
 
-import Header from "Common/Header"
 import { Container } from "Common/Container"
 import {
-  OuterWrapper,
-  InnerWrapper,
+  Wrapper,
   Details,
   Thumbnail,
   Socials,
@@ -13,9 +11,7 @@ import { welcome, name, intro, socials } from "Data"
 import hero from "Static/images/hero.svg"
 
 const Intro = () => (
-  <OuterWrapper>
-    <Header />
-    <InnerWrapper as={Container}>
+    <Wrapper as={Container}>
       <Details>
         <h1>{welcome}!</h1>
         <h4>
@@ -32,8 +28,7 @@ const Intro = () => (
       <Thumbnail>
         <img src={hero} alt={welcome} />
       </Thumbnail>
-    </InnerWrapper>
-  </OuterWrapper>
+    </Wrapper>
 )
 
 export default Intro
