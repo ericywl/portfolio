@@ -1,10 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 import { Wrapper, Navbar, SideLinks } from "./styles"
-import { title } from "Data"
 import { Container } from "Common/Container"
 import icon from "Static/icons/robot.png"
 

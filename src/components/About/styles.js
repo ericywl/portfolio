@@ -1,10 +1,6 @@
 import styled from "styled-components"
 
-export const OuterWrapper = styled.div`
-  padding-bottom: 2rem;
-`
-
-export const InnerWrapper = styled.div`
+export const Wrapper = styled.div`
   padding: 4rem 0;
   display: flex;
   align-items: center;
@@ -17,55 +13,38 @@ export const InnerWrapper = styled.div`
 
 export const Details = styled.div`
   flex: 1;
+  padding-left: 2rem;
 
   @media (max-width: 960px) {
+    padding-left: unset;
     width: 100%;
-    margin-bottom: 2rem;
   }
 
   h1 {
     margin-bottom: 2rem;
-    font-size: 36pt;
+    font-size: 26pt;
     color: #212121;
-
-    @media (max-width: 680px) {
-      font-size: 30pt;
-    }
   }
 
-  h4 {
+  p {
     margin-bottom: 2.5rem;
-    font-size: 32pt;
+    font-size: 20pt;
     font-weight: normal;
+    line-height: 1.3;
     color: #707070;
-
-    @media (max-width: 680px) {
-      font-size: 26pt;
-    }
   }
 `
 
 export const Thumbnail = styled.div`
   flex: 1;
+  max-width: 45%;
 
   @media (max-width: 960px) {
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   img {
     width: 100%;
-  }
-`
-
-export const Socials = styled.div`
-  display: flex;
-  align-items: center;
-
-  a {
-    margin-right: 1.5rem;
-
-    img {
-      margin: 0;
-    }
   }
 `

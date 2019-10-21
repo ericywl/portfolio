@@ -3,13 +3,14 @@ import styled from "styled-components"
 export const SideLinks = styled.div`
   a {
     color: #6d6d6d;
+    font-size: 14pt;
     text-decoration: none;
     margin-right: 1rem;
     &:last-child {
       margin-right: unset;
     }
   }
-
+  
   @media (max-width: 960px) {
     display: none;
   }
