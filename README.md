@@ -1,6 +1,3 @@
----
-permalink: /index.html
----
 # ericywl's portfolio
 
 Created using Gatsby.
