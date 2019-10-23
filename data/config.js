@@ -79,14 +79,14 @@ module.exports = {
       id: 5,
       name: "PyTor Browser",
       description:
-        "Demonstration of onion-routing in Electron",
+        "Demonstration of onion-routing in an Electron browser, backed by Python",
       link: "https://github.com/causztic/pytor-browser",
       time: "Oct. 2018 - Nov. 2018",
     },
     {
       id: 6,
       name: "Twitter POS Tagging",
-      description: "Part-of-Speech tagging with HMMs using pure Python",
+      description: "Part-of-Speech tagging with HMMs written purely in Python",
       link: "https://github.com/ericywl/hmm-pos-tag",
       time: "Sep. 2018 - Oct. 2018",
     },
