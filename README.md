@@ -1,4 +1,4 @@
-# ericywl's portfolio
+# ericywl's portfolio · [![Build Status](https://travis-ci.com/ericywl/ericywl.github.io.svg)](https://travis-ci.com/ericywl/ericywl.github.io)
 
 Created using Gatsby.
 
