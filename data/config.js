@@ -71,7 +71,7 @@ module.exports = {
       id: 4,
       name: "Archwing",
       description:
-        "Dummy Ethereum distributed application for airplane insurance",
+        "Dummy Ethereum distributed application for flight delay insurance",
       link: "https://github.com/causztic/archwing",
       time: "Oct. 2018 - Nov. 2018",
     },
