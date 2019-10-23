@@ -1,11 +1,14 @@
+const li = "https://linkedin.com/in/ericywl"
+const gh = "https://github.com/ericywl"
+
 module.exports = {
   title: "Eric Yap",
   name: "Eric",
   handle: "ericywl",
   welcome: "Hello World",
   intro: "an aspiring Software Engineer",
-  linkedin: "https://linkedin.com/in/ericywl",
-  github: "https://github.com/ericywl",
+  linkedin: li,
+  github: gh,
   about: [
     {
       id: 0,
@@ -22,13 +25,13 @@ module.exports = {
     {
       id: 0,
       name: "LinkedIn",
-      link: this.linkedin,
+      link: li,
       icon: "/icons/linkedin.svg",
     },
     {
       id: 1,
       name: "GitHub",
-      link: this.github,
+      link: gh,
       icon: "/icons/github.svg",
     },
   ],
