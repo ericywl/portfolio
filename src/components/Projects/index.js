@@ -11,9 +11,9 @@ const createItem = node => {
     <Stats>
       <div>
         {node.link !== "" ? (
-          <img width="16px" src={githubBlack} alt={node.name} />
+          <img width="16px" height="16px" src={githubBlack} alt={node.name} />
         ) : (
-          <img width="16px" height="14px" src={slash} alt="Not available" />
+          <img width="18px" height="16px" src={slash} alt="Not available" />
         )}
         <span>{node.time}</span>
       </div>
@@ -70,7 +70,7 @@ const Projects = () => (
         <Card>
           <Content>
             <h4>Many More...</h4>
-            <div style={{ width: "60px", margin: "auto" }}>
+            <div style={{ width: "54px", margin: "auto" }}>
               <img src={githubBlack} alt="Many more at GitHub" />
             </div>
           </Content>
