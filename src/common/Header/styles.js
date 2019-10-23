@@ -6,11 +6,18 @@ export const SideLinks = styled.div`
     font-size: 14pt;
     text-decoration: none;
     margin-right: 1rem;
+    padding-bottom: 5px;
+
     &:last-child {
       margin-right: unset;
     }
+
+    &:hover {
+      border-bottom: 3px solid black;
+      transition: 0.2s;
+    }
   }
-  
+
   @media (max-width: 960px) {
     display: none;
   }

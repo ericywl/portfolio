@@ -37,12 +37,16 @@ export const Item = styled.div`
   p {
     color: #707070;
   }
+  
+  &:hover {
+    box-shadow: 0 4px 10px 0 #88ff88;
+  }
 `
 
 export const Card = styled.div`
   padding: 1rem;
   background: #ffffff;
-  box-shadow: 0 3px 6px 0 rgba(0, 0.1, 0, 0.09);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.09);
   height: 100%;
 `
 
@@ -51,9 +55,8 @@ export const Content = styled.div`
 `
 
 export const Stats = styled.div`
-  display: flex;
   align-items: center;
-  height: 33px;
+  padding-bottom: 0.2rem;
 
   div {
     display: flex;
