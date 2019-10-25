@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+Array [
+  <div
+    className="sc-bwzfXH xQRDH"
+  >
+    <div
+      className="sc-bxivhb KOyPd sc-htpNat gcOxHz"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="Icon"
+          src="test-file-stub"
+          width="70px"
+        />
+      </a>
+      <div
+        className="sc-bdVaJa dGfGoS"
+      >
+        <a
+          href="#about"
+          onClick={[Function]}
+        >
+          About
+        </a>
+        <a
+          href="#projects"
+          onClick={[Function]}
+        >
+          Projects
+        </a>
+        <a
+          href="/ericywl_resume.pdf"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Resume
+        </a>
+      </div>
+    </div>
+  </div>,
+  <div>
+    Dummy child
+  </div>,
+  <div
+    className="sc-ifAKCX beCMfH"
+  >
+    <div
+      className="sc-bxivhb KOyPd sc-EHOje cnSYZS"
+    >
+      <div
+        className="sc-gzVnrw bVysae"
+      >
+        <h2>
+          Eric Yap
+        </h2>
+        <span>
+          © All rights reserved, 
+          2019
+           | Made with GatsbyJS
+        </span>
+      </div>
+      <div
+        className="sc-bZQynM bGniFE"
+      >
+        <a
+          href="https://linkedin.com/in/ericywl"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="LinkedIn"
+            src="/icons/linkedin.svg"
+            width="24"
+          />
+        </a>
+        <a
+          href="https://github.com/ericywl"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="GitHub"
+            src="/icons/github.svg"
+            width="24"
+          />
+        </a>
+      </div>
+    </div>
+  </div>,
+]
+`;
