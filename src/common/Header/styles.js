@@ -19,7 +19,9 @@ export const SideLinks = styled.div`
   }
 
   @media (max-width: 960px) {
-    display: none;
+    a {
+      font-size: 12pt;
+    }
   }
 `
 
