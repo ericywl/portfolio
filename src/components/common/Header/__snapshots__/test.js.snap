@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<div
+  className="sc-bwzfXH xQRDH"
+>
+  <div
+    className="sc-bxivhb KOyPd sc-htpNat gcOxHz"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Icon"
+        src="test-file-stub"
+        width="70px"
+      />
+    </a>
+    <div
+      className="sc-bdVaJa dGfGoS"
+    >
+      <a
+        href="#about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+      <a
+        href="#projects"
+        onClick={[Function]}
+      >
+        Projects
+      </a>
+      <a
+        href="/ericywl_resume.pdf"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Resume
+      </a>
+    </div>
+  </div>
+</div>
+`;

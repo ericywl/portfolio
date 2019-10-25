@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<div
+  className="sc-bdVaJa hUrHEV"
+>
+  <div
+    className="sc-ifAKCX hvYbZO sc-bwzfXH gNtwKT"
+  >
+    <div
+      className="sc-bxivhb czXkbH"
+    >
+      <h2>
+        Eric Yap
+      </h2>
+      <span>
+        © All rights reserved, 
+        2019
+         | Made with GatsbyJS
+      </span>
+    </div>
+    <div
+      className="sc-htpNat bKOJXB"
+    >
+      <a
+        href="https://linkedin.com/in/ericywl"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="LinkedIn"
+          src="/icons/linkedin.svg"
+          width="24"
+        />
+      </a>
+      <a
+        href="https://github.com/ericywl"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="GitHub"
+          src="/icons/github.svg"
+          width="24"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
