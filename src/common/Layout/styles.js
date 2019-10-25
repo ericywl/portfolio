@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components"
 
-// Defaults from Gatsby starter
 export const Global = createGlobalStyle`
   html {
     font-family: 'Roboto', Helvetica, sans-serif;
