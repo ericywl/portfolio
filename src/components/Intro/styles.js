@@ -1,13 +1,14 @@
 import styled, { keyframes } from "styled-components"
 
 export const Wrapper = styled.div`
-  padding: 5rem 0;
+  padding: 4rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   @media (max-width: 960px) {
     flex-direction: column;
+    padding: 2rem 0;
   }
 `
 
@@ -28,6 +29,10 @@ export const Details = styled.div`
     margin-bottom: 2rem;
     font-size: 36pt;
     color: #212121;
+    
+    @media (max-width: 960px) {
+      font-size: 33pt;
+    }
 
     @media (max-width: 680px) {
       font-size: 30pt;
@@ -39,6 +44,10 @@ export const Details = styled.div`
     font-size: 32pt;
     font-weight: normal;
     color: #707070;
+    
+    @media (max-width: 960px) {
+      font-size: 29pt;
+    }
 
     @media (max-width: 680px) {
       font-size: 26pt;
