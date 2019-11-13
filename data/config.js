@@ -13,12 +13,15 @@ module.exports = {
     {
       id: 0,
       text:
-        "I'm currently a final year Computer Science student at Singapore University of Technology & Design (SUTD).",
+        "A Computer Science graduate from Singapore University of Technology & Design (SUTD), " +
+        "looking for Software Engineering jobs.",
     },
     {
       id: 1,
       text:
-        "I love tech and problem solving, which makes me right at home in Software Engineering. I'm also into Japanese culture as well as the language itself.",
+        "I love exploring new tech, problem solving and learning about cybersecurity. " +
+        "I'm also into Japanese culture and the language itself, " +
+        "oh and electric guitar recently as well.",
     },
   ],
   socials: [
