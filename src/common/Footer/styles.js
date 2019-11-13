@@ -3,6 +3,7 @@ import styled from "styled-components"
 import footer from "Static/images/footer.svg"
 
 export const Wrapper = styled.div`
+  margin-top: auto;
   padding: 28rem 0 4rem 0;
   background-image: url(${footer});
   background-size: cover;
@@ -11,6 +12,10 @@ export const Wrapper = styled.div`
 
   @media (max-width: 1960px) {
     padding: 14rem 0 4rem;
+  }
+  
+  @media (max-width: 680px) {
+    padding-bottom: 1rem;
   }
 `
 

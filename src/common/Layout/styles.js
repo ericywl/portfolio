@@ -1,4 +1,10 @@
-import { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from "styled-components"
+
+export const Wrapper = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
 
 export const Global = createGlobalStyle`
   html {
