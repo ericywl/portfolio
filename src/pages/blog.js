@@ -6,7 +6,7 @@ import SEO from "Common/SEO"
 import Blog from "Components/Blog"
 
 const BlogPage = ({ data }) => (
-  <Layout notFound={false}>
+  <Layout noAnchor={true}>
     <SEO title="ericywl" />
     <Blog data={data} />
   </Layout>
