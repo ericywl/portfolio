@@ -35,6 +35,11 @@ export const Content = styled.div`
   font-size: 14pt;
   line-height: 1.6;
   color: #24292e;
+  
+  @media (max-width: 680) {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
 
   h1,
   h2 {

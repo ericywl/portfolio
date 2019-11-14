@@ -50,7 +50,9 @@ After implementing the algorithm on the whiteboard, the interviewer seemed satis
 
 > What if we want the k-th most frequent word instead?
 
-Simple right? Instead of doing the swap between two variables, we just use an array. Whenever we append a new element to the array, we check if it is larger than the previous element and swap them if it is. We keep doing this ie. bubbling the element up until the condition is no longer true. This ensures that the array is sorted as we are iterating through the document. The overall complexity would be `O(nk)` since in worst case scenario, we have to bubble-up the element `k`-times for the whole document (technically `O(2nk)` since we need to check if the word is already in the array but we can drop the constant).
+Simple right? Instead of doing the swap between two variables, we just use an array. Whenever we append a new element to the array, we check if it is larger than the previous element and swap them if it is. We keep doing this ie. bubbling the element up until the condition is no longer true.
+
+This ensures that the array is sorted as we are iterating through the document. The overall complexity would be `O(nk)` since in worst case scenario, we have to bubble-up the element `k`-times for the whole document (technically `O(2nk)` since we need to check if the word is already in the array but we can drop the constant).
 
 After suggesting this algorithm to the interviewer, I was asked if we can do better. After some time of thinking, I was eventually given a hint.
 

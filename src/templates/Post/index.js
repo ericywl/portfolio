@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import Layout from "Common/Layout"
+import SEO from "Common/SEO"
 import { Container } from "Common/Container"
 import { Wrapper, Content, Heading } from "./styles"
 
@@ -9,6 +10,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
+      <SEO title={post.frontmatter.title} />
       <Wrapper as={Container} id={post.id}>
         <Heading>
           <h3>{post.frontmatter.title}</h3>
