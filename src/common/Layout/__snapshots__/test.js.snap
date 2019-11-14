@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Layout renders correctly 1`] = `
-Array [
+<div
+  className="sc-bdVaJa hCWfrK"
+>
   <div
-    className="sc-bwzfXH xQRDH"
+    className="sc-htpNat byqpMq"
   >
     <div
-      className="sc-bxivhb KOyPd sc-htpNat gcOxHz"
+      className="sc-ifAKCX hvYbZO sc-bxivhb hkbWSW"
     >
       <a
         href="/"
@@ -18,7 +20,7 @@ Array [
         />
       </a>
       <div
-        className="sc-bdVaJa dGfGoS"
+        className="sc-bwzfXH hrnKiS"
       >
         <a
           href="#about"
@@ -33,6 +35,11 @@ Array [
           Projects
         </a>
         <a
+          href="/blog"
+        >
+          Blog
+        </a>
+        <a
           href="/ericywl_resume.pdf"
           rel="noopener noreferrer"
           target="_blank"
@@ -41,18 +48,18 @@ Array [
         </a>
       </div>
     </div>
-  </div>,
+  </div>
   <div>
     Dummy child
-  </div>,
+  </div>
   <div
-    className="sc-ifAKCX beCMfH"
+    className="sc-EHOje dSMNBX"
   >
     <div
-      className="sc-bxivhb KOyPd sc-EHOje cnSYZS"
+      className="sc-ifAKCX hvYbZO sc-bZQynM jNLmgC"
     >
       <div
-        className="sc-gzVnrw bVysae"
+        className="sc-htoDjs fUXPpN"
       >
         <h2>
           Eric Yap
@@ -64,7 +71,7 @@ Array [
         </span>
       </div>
       <div
-        className="sc-bZQynM bGniFE"
+        className="sc-gzVnrw fOZCsO"
       >
         <a
           href="https://linkedin.com/in/ericywl"
@@ -90,6 +97,6 @@ Array [
         </a>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
