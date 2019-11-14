@@ -9,21 +9,21 @@ const Dummy = () => <div>Dummy child</div>
 describe("Layout", () => {
   it("renders correctly", () => {
     const component = renderer.create(
-      <Layout children={<Dummy />} notFound={false} />
+      <Layout children={<Dummy />} noAnchor={false} />
     )
     const tree = component.toJSON()
     expect(tree).toMatchSnapshot()
   })
 
-  it("passes notFound to Header", () => {
+  it("passes noAnchor to Header", () => {
     const falseComponent = renderer.create(
-      <Layout children={<Dummy />} notFound={false} />
+      <Layout children={<Dummy />} noAnchor={false} />
     )
-    expect(falseComponent.root.findByType(Header).props.notFound).toBe(false)
+    expect(falseComponent.root.findByType(Header).props.noAnchor).toBe(false)
 
     const trueComponent = renderer.create(
-      <Layout children={<Dummy />} notFound={true} />
+      <Layout children={<Dummy />} noAnchor={true} />
     )
-    expect(trueComponent.root.findByType(Header).props.notFound).toBe(true)
+    expect(trueComponent.root.findByType(Header).props.noAnchor).toBe(true)
   })
 })

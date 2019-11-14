@@ -5,7 +5,7 @@ import { Container } from "Common/Container"
 import SEO from "Common/SEO"
 
 const NotFoundPage = () => (
-  <Layout notFound={true}>
+  <Layout noAnchor={true}>
     <SEO title="404: Not found" />
     <Container>
       <h1>NOT FOUND</h1>

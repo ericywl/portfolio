@@ -6,9 +6,9 @@ import Header from "Common/Header"
 import Footer from "Common/Footer"
 import "./fonts.css"
 
-const Layout = ({ children, notFound }) => (
+const Layout = ({ children, noAnchor }) => (
   <Wrapper>
-    <Header notFound={notFound} />
+    <Header noAnchor={noAnchor} />
     <Global />
     {children}
     <Footer />
@@ -17,7 +17,7 @@ const Layout = ({ children, notFound }) => (
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  notFound: PropTypes.bool,
+  noAnchor: PropTypes.bool,
 }
 
 export default Layout

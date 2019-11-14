@@ -7,33 +7,34 @@ import { Wrapper, Navbar, SideLinks } from "./styles"
 import { Container } from "Common/Container"
 import icon from "Static/icons/robot.png"
 
-const Header = ({ notFound }) => (
+const Header = ({ noAnchor }) => (
   <Wrapper>
     <Navbar as={Container}>
       <Link to="/">
         <img src={icon} width="70px" alt="Icon" />
       </Link>
-      {!notFound ? (
-        <SideLinks>
-          <AnchorLink href="#about">About</AnchorLink>
-          <AnchorLink href="#projects">Projects</AnchorLink>
-          <a
-            href="/ericywl_resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-        </SideLinks>
-      ) : (
-        ""
-      )}
+      <SideLinks>
+        {!noAnchor ? (
+          <>
+            <AnchorLink href="#about">About</AnchorLink>
+            <AnchorLink href="#projects">Projects</AnchorLink>
+          </>
+        ) : (
+          ""
+        )}
+        <Link to="/blog">
+          Blog 
+        </Link>
+        <a href="/ericywl_resume.pdf" target="_blank" rel="noopener noreferrer">
+          Resume
+        </a>
+      </SideLinks>
     </Navbar>
   </Wrapper>
 )
 
 Header.propTypes = {
-  notFound: PropTypes.bool,
+  noAnchor: PropTypes.bool,
 }
 
 export default Header
