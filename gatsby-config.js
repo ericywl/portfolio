@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/static/`,
       },
     },
+    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
