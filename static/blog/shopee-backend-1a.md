@@ -3,7 +3,7 @@ title: "Shopee Backend SWE Interview R1-A"
 date: "2019-11-13"
 ---
 
-Just recently, I got an interview with Shopee, an e-commerce company in Singapore, for the backend software engineer position. I thought it would be great to note down my experience here, for my own future reference and so I did.
+Just recently, I got an interview with Shopee, an e-commerce company in Singapore, for the fresh grad backend software engineer position. I thought it would be great to note down my experience here for my own future reference, and so I did.
 
 <center>
    <img src="../images/shopee-lobby.jpg" alt="What I saw when I went into the office, image credit to VulcanPost" /><br>
@@ -17,7 +17,7 @@ I will just spare the details and skip forward to the interview itself. The firs
 
 > Can you tell me more about an interesting project that you have done?
 
-The previous questions are fairly typical so I just answered them as best as I could.
+The above questions are fairly typical so I just answered them as best as I could.
 The real technical interview starts here. I was first asked to solve a small coding challenge.
 
 > Given a document (represented by a list of words) can you find the word that is the 2-nd most frequent?
