@@ -22,6 +22,10 @@ I was then asked to create the necessary tables for the backend, which I did -- 
 
 When I think of indexes, only hashing comes into mind, so that's what I answered. And certainly, for things like ID, hash tables are a good way to store those. But after some hinting from the interviewer, I realized that in order for the application to be able to access transactions from a certain time period, we have to index `TIMESTAMPS` as well. There is no way we can perform quick access of `TIMESTAMPS` if we used hashing, since there are potentially infinite intervals within a time period. This led me to think that the indexing is done with a tree, since the tree structure seems to do well in this kind of context. But of course, I have no idea about the details.
 
+<center>
+   <img src="../images/b+tree.png" alt="Example of a B+Tree from SQLify" /><br>
+</center>
+
 The interviewer was kind enough to explain about this to me. Apparently, SQL uses B+Trees for its index storage. B+Tree is essentially an N-ary tree with variable number of children per node. What's interesting about B+Tree is that the leaves of the tree are often linked to one another, allowing for a more efficient element iteration as compared to ordinary trees. I won't talk too much about B+Tree here, you can find out more on the [Wiki](https://en.wikipedia.org/wiki/B%2B_tree).
 
 ## API Design
