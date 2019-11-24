@@ -72,4 +72,4 @@ Luckily I only had to implement the `insert()` and `balance()` function. After t
 
    a. Replace the minimum with the current and then balance the heap if true
 
-This makes the whole algorithm `O(n log k)`, since the balancing of the heap takes at most the height of the heap (if we visualize it in a tree structure) ie. `log k`. The interviewer was satisfied with my overall implementation and proceeded onto the next problem, which I will cover soon in another post.
+This makes the whole algorithm `O(n log k)`, since the balancing of the heap takes at most the height of the heap (if we visualize it in a tree structure) ie. `log k`. The interviewer was satisfied with my overall implementation and proceeded onto the next problem, which I will cover soon in [the next post](/blog/shopee-backend-1b/).

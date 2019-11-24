@@ -9,7 +9,7 @@ import { Wrapper, Content, Heading } from "./styles"
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout noAnchor={true}>
       <SEO title={post.frontmatter.title} />
       <Wrapper as={Container} id={post.id}>
         <Heading>

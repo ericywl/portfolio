@@ -35,7 +35,7 @@ export const Content = styled.div`
   font-size: 14pt;
   line-height: 1.6;
   color: #24292e;
-  
+
   @media (max-width: 680) {
     font-size: 12pt;
     line-height: 1.5;
@@ -81,5 +81,15 @@ export const Content = styled.div`
     ::after {
       display: none;
     }
+  }
+
+  pre > code {
+    background: transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    word-break: normal;
   }
 `
