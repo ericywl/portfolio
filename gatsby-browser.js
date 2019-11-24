@@ -5,3 +5,4 @@
  */
 
 // You can delete this file if you're not using it
+require("Static/my-prism.css")
