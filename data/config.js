@@ -6,7 +6,7 @@ module.exports = {
   name: "Eric",
   handle: "ericywl",
   welcome: "Hello World",
-  intro: "an aspiring Software Engineer",
+  intro: "a Backend Software Engineer",
   linkedin: li,
   github: gh,
   about: [
@@ -14,7 +14,7 @@ module.exports = {
       id: 0,
       text:
         "A Computer Science graduate from Singapore University of Technology & Design (SUTD), " +
-        "looking for Software Engineering jobs.",
+        "working in Shopee as a Software Engineer.",
     },
     {
       id: 1,
