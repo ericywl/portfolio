@@ -15,7 +15,7 @@
         },
         {
             name: "Resume",
-            link: "base" + "/ericywl_resume.pdf",
+            link: base + "/ericywl_resume.pdf",
         },
     ];
 </script>
