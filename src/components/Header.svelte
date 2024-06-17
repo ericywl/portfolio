@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { base } from "$app/paths";
+
     export let y: number;
     let linkedin = "https://linkedin.com/in/ericywl";
 
@@ -10,6 +12,10 @@
         {
             name: "About Me",
             link: "#about",
+        },
+        {
+            name: "Resume",
+            link: "base" + "/ericywl_resume.pdf",
         },
     ];
 </script>
