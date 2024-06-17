@@ -63,30 +63,46 @@
         },
     ];
 
-    let word: string | null | undefined;
-    let letterIdx: number = 0;
-    function typing() {
-        if (word === null || word === undefined) {
-            return;
-        }
+    async function sleep(ms: number): Promise<void> {
+        return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
+    let words: string[] = ["Engineer.", "Developer.", "Architect."];
+    let currentWord: string;
+    let wordIdx: number = 0;
+    let letterIdx: number = 0;
+    let isDeleting: boolean = false;
+
+    async function typing() {
+        currentWord = words[wordIdx];
         let element = document.getElementById("typewriter");
         if (element === null) {
             return;
         }
 
-        element.textContent = word.substring(0, letterIdx + 1);
-        letterIdx++;
-
-        if (letterIdx == word.length) {
-            return;
+        if (isDeleting) {
+            element.textContent = currentWord.substring(0, letterIdx - 1);
+            letterIdx--;
+            if (letterIdx == 0) {
+                isDeleting = false;
+                wordIdx++;
+                if (wordIdx == words.length) {
+                    wordIdx = 0;
+                }
+            }
+            setTimeout(typing, 100);
+        } else {
+            element.textContent = currentWord.substring(0, letterIdx + 1);
+            letterIdx++;
+            if (letterIdx == currentWord.length) {
+                isDeleting = true;
+                await sleep(2000);
+            }
+            setTimeout(typing, 150);
         }
-
-        setTimeout(typing, 300);
     }
 
     onMount(() => {
-        word = document.getElementById("typewriter")?.textContent;
         typing();
     });
 </script>
@@ -100,12 +116,11 @@
             class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 lg:col-span-3"
         >
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
-                Hi! I'm <span class="poppins text-violet-400">Eric</span> Yap
+                Hi! I'm <span class="poppins text-violet-400">Eric</span> Yap,
                 <br />
-                Backend Software
-                <span id="typewriter" class="poppins text-violet-400">
-                    Engineer.
-                </span> <span class="animate-blink">|</span>
+                Backend Software <br />
+                <span id="typewriter" class="poppins text-violet-400"></span>
+                <span class="animate-blink">|</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
                 My <span class="text-violet-400">favorite tech</span> includes Software
