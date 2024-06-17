@@ -123,8 +123,10 @@
                 <span class="animate-blink">|</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
-                My <span class="text-violet-400">favorite tech</span> includes Software
-                Development, Cryptography and more.
+                My <span class="text-violet-400">favorite tech</span> includes
+                Software Development (particularly in
+                <span class="underline">Rust</span>
+                & <span class="underline">Go</span>), Cryptography and more.
             </p>
         </div>
         <div class="relative shadow-2xl grid place-items-center lg:col-span-2">
