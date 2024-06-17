@@ -1,8 +1,0 @@
-// Enable Jest code autocomplete suggestions
-{
-    "typeAcquisition": {
-        "include": [
-            "jest"
-        ]
-    }
-}
