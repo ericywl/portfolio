@@ -8,6 +8,7 @@
 <script lang="ts">
     import Step from "./Step.svelte";
     import { type StepT } from "./Step.svelte";
+    import { onMount } from "svelte";
 
     let github: string = "https://github.com/ericywl";
 
@@ -61,6 +62,33 @@
                 "This helps me develop deep relationships and ensures my effectiveness and productivity in any workspace with any team.",
         },
     ];
+
+    let word: string | null | undefined;
+    let letterIdx: number = 0;
+    function typing() {
+        if (word === null || word === undefined) {
+            return;
+        }
+
+        let element = document.getElementById("typewriter");
+        if (element === null) {
+            return;
+        }
+
+        element.textContent = word.substring(0, letterIdx + 1);
+        letterIdx++;
+
+        if (letterIdx == word.length) {
+            return;
+        }
+
+        setTimeout(typing, 300);
+    }
+
+    onMount(() => {
+        word = document.getElementById("typewriter")?.textContent;
+        typing();
+    });
 </script>
 
 <main class="flex flex-col flex-1 p-4 pl-10 pr-10 lg:pl-20 lg:pr-20">
@@ -75,7 +103,9 @@
                 Hi! I'm <span class="poppins text-violet-400">Eric</span> Yap
                 <br />
                 Backend Software
-                <span class="poppins text-violet-400">Engineer</span>
+                <span id="typewriter" class="poppins text-violet-400">
+                    Engineer.
+                </span> <span class="animate-blink">|</span>
             </h2>
             <p class="text-base sm:text-lg md:text-xl">
                 My <span class="text-violet-400">favorite tech</span> includes Software
@@ -104,9 +134,10 @@
             href={github}
             target="_blank"
             class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10
-            hover:border-violet-700 duration-200"
+            hover:border-violet-700 hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent
+            hover:from-violet-300 hover:via-violet-600 hover:to-violet-300 hover:animate-text duration-200"
         >
-            <i class="fas fa-arrow-right"></i>
+            <i class="fa-brands fa-github"></i>
             <p>Head to GitHub</p>
         </a>
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">
@@ -152,6 +183,8 @@
             {/each}
         </div>
 
-        <p class="mx-auto">So what are you waiting for?</p>
+        <p class="poppins text-violet-400 mx-auto">
+            So what are you waiting for?
+        </p>
     </section>
 </main>

@@ -55,7 +55,9 @@
         </p>
         <div class="flex-1 flex justify-betweeen gap-4 items-end">
             <div
-                class="ml-auto p-1 rounded-md cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
+                class="ml-auto py-1 px-2 rounded-md cursor-pointer hover:text-slate-950 duration-200 relative after:absolute
+                after:top-0 after:right-full after:bg-violet-200 after:w-full after:h-full after:duration-200 after:z-[-1]
+                hover:after:translate-x-full overflow-hidden"
             >
                 <p class="z-4">Go to &rarr;</p>
             </div>

@@ -58,15 +58,16 @@
             : "py-6 bg-transparent border-transparent")}
 >
     <div class="flex">
-        <div>
+        <div class="max-sm:block hidden">
             <button
                 on:click={toggleShowDropdown}
-                class="block pr-4 lg:hidden focus:outline-none focus:border-white"
+                class="pr-4 focus:outline-none focus:border-white"
             >
                 <i class="fa-solid fa-bars" />
             </button>
             <div
-                class={"absolute blue-shadow bg-opacity-50 bg-violet-900 rounded-md mt-2 py-2 w-48 duration-200 transition-all overflow-hidden " +
+                class={"absolute z-10 border border-violet-700 mt-6 -ml-6 px-2 rounded-md py-2 w-full " +
+                    "blue-shadow bg-opacity-65 bg-violet-950 duration-300 transition-all overflow-hidden " +
                     (showDropdown ? "max-h-40" : "max-h-0 invisible")}
             >
                 {#each tabs as tab}
