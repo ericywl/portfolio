@@ -63,13 +63,13 @@
     ];
 </script>
 
-<main class="flex flex-col flex-1 p-4 pl-20 pr-20">
+<main class="flex flex-col flex-1 p-4 pl-10 pr-10 lg:pl-20 lg:pr-20">
     <section
         id="intro-page"
         class="grid grid-cols-1 lg:grid-cols-5 gap-10 py-8 sm:py-14"
     >
         <div
-            class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 col-span-3"
+            class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 lg:col-span-3"
         >
             <h2 class="font-semibold text-4xl sm:text-5xl md:text-6xl">
                 Hi! I'm <span class="poppins text-violet-400">Eric</span> Yap
@@ -82,7 +82,7 @@
                 Development, Cryptography and more.
             </p>
         </div>
-        <div class="relative shadow-2xl grid place-items-center col-span-2">
+        <div class="relative shadow-2xl grid place-items-center lg:col-span-2">
             <img
                 src={"images/profile.png"}
                 alt="Eric Yap"
@@ -151,9 +151,7 @@
                 </div>
             {/each}
         </div>
-        <div class="mx-auto -mt-12 italic sm:hidden opacity-50">
-            <p>Scroll to see more &rarr;</p>
-        </div>
+
         <p class="mx-auto">So what are you waiting for?</p>
     </section>
 </main>

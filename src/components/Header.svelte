@@ -1,23 +1,54 @@
 <script lang="ts">
     import { base } from "$app/paths";
+    import { browser } from "$app/environment";
+    import { onMount, onDestroy } from "svelte";
 
     export let y: number;
     let linkedin = "https://linkedin.com/in/ericywl";
 
-    let tabs = [
+    type TabT = { name: string; link: string; external: boolean };
+    let tabs: TabT[] = [
         {
             name: "Projects",
             link: "#projects",
+            external: false,
         },
         {
             name: "About Me",
             link: "#about",
+            external: false,
         },
         {
             name: "Resume",
             link: base + "/ericywl_resume.pdf",
+            external: true,
         },
     ];
+
+    let showDropdown: boolean = false;
+    function closeDropdown(e: Event) {
+        showDropdown = false;
+        e.stopPropagation();
+    }
+
+    function toggleShowDropdown(e: Event) {
+        showDropdown = !showDropdown;
+        e.stopPropagation();
+    }
+
+    onMount(() => {
+        window.onscroll = () => {
+            if (window.scrollY > 1) {
+                showDropdown = false;
+            }
+        };
+    });
+
+    onDestroy(() => {
+        if (browser) {
+            window.onscroll = () => {};
+        }
+    });
 </script>
 
 <header
@@ -26,14 +57,54 @@
             ? "py-4 bg-slate-950 border-violet-950"
             : "py-6 bg-transparent border-transparent")}
 >
-    <h1 class="font-medium">
-        <b class="font-bold poppins">Eric</b> Yap
-    </h1>
+    <div class="flex">
+        <div>
+            <button
+                on:click={toggleShowDropdown}
+                class="block pr-4 lg:hidden focus:outline-none focus:border-white"
+            >
+                <i class="fa-solid fa-bars" />
+            </button>
+            <div
+                class={"absolute blue-shadow bg-opacity-50 bg-violet-900 rounded-md mt-2 py-2 w-48 duration-200 transition-all overflow-hidden " +
+                    (showDropdown ? "max-h-40" : "max-h-0 invisible")}
+            >
+                {#each tabs as tab}
+                    {#if tab.external}
+                        <a
+                            href={tab.link}
+                            target="_blank"
+                            class="block px-4 py-2"
+                        >
+                            <p>{tab.name}</p>
+                        </a>
+                    {:else}
+                        <a href={tab.link} class="block px-4 py-2">
+                            <p>{tab.name}</p>
+                        </a>
+                    {/if}
+                {/each}
+            </div>
+        </div>
+        <h1 class="font-medium">
+            <b class="font-bold poppins">Eric</b> Yap
+        </h1>
+    </div>
     <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
         {#each tabs as tab}
-            <a href={tab.link} class="duration-200 hover:text-violet-400">
-                <p>{tab.name}</p>
-            </a>
+            {#if tab.external}
+                <a
+                    href={tab.link}
+                    target="_blank"
+                    class="duration-200 hover:text-violet-400"
+                >
+                    <p>{tab.name}</p>
+                </a>
+            {:else}
+                <a href={tab.link} class="duration-200 hover:text-violet-400">
+                    <p>{tab.name}</p>
+                </a>
+            {/if}
         {/each}
     </div>
     <a
@@ -48,3 +119,5 @@
         <h4 class="relative z-9">Get In Touch</h4>
     </a>
 </header>
+
+<svelte:window on:click={closeDropdown} />
