@@ -1,13 +1,11 @@
 <script lang="ts">
     import { base } from "$app/paths";
-    import { browser } from "$app/environment";
-    import { onMount, onDestroy } from "svelte";
+    import { myLinkedin } from "../data/links";
+    import { type Tab } from "../data/models";
 
-    export let y: number;
-    let linkedin = "https://linkedin.com/in/ericywl";
+    export let scrollY: number;
 
-    type TabT = { name: string; link: string; external: boolean };
-    let tabs: TabT[] = [
+    let tabs: Tab[] = [
         {
             name: "Projects",
             link: "#projects",
@@ -35,25 +33,11 @@
         showDropdown = !showDropdown;
         e.stopPropagation();
     }
-
-    onMount(() => {
-        window.onscroll = () => {
-            if (window.scrollY > 1) {
-                showDropdown = false;
-            }
-        };
-    });
-
-    onDestroy(() => {
-        if (browser) {
-            window.onscroll = () => {};
-        }
-    });
 </script>
 
 <header
     class={"sticky z-[10] top-0 duration-200 px-6 flex items-center justify-between border border-solid " +
-        (y > 0
+        (scrollY > 0
             ? "py-4 bg-slate-950 border-violet-950"
             : "py-6 bg-transparent border-transparent")}
 >
@@ -87,9 +71,11 @@
                 {/each}
             </div>
         </div>
-        <h1 class="font-medium">
-            <b class="font-bold poppins">Eric</b> Yap
-        </h1>
+        <a href={base} class="hover:text-violet-400 hover:animate-pulse">
+            <h1 class="font-medium">
+                <b class="font-bold poppins">Eric</b> Yap
+            </h1>
+        </a>
     </div>
     <div class="sm:flex ml-auto pr-4 items-center gap-4 hidden">
         {#each tabs as tab}
@@ -109,7 +95,7 @@
         {/each}
     </div>
     <a
-        href={linkedin}
+        href={myLinkedin}
         target="_blank"
         class="blue-shadow relative overflow-hidden px-5 py-2 group rounded-full
         bg-white text-slate-950"
@@ -121,4 +107,4 @@
     </a>
 </header>
 
-<svelte:window on:click={closeDropdown} />
+<svelte:window on:click={closeDropdown} on:scroll={closeDropdown} />

@@ -1,9 +1,9 @@
 <script lang="ts">
     import "../app.css";
-    import Header from "../components/Header.svelte";
-    import Footer from "../components/Footer.svelte";
+    import Header from "../lib/components/Header.svelte";
+    import Footer from "../lib/components/Footer.svelte";
 
-    let y: number;
+    let scrollY: number;
     let innerHeight: number = 0;
     let innerWidth: number = 0;
 
@@ -17,7 +17,7 @@
 >
     <div
         class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10] " +
-            (y > 0
+            (scrollY > 0
                 ? "opacity-full pointer-events-auto"
                 : "opacity-0 pointer-events-none")}
     >
@@ -30,9 +30,9 @@
             />
         </button>
     </div>
-    <Header {y} />
+    <Header {scrollY} />
     <slot />
     <Footer />
 </div>
 
-<svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth />
+<svelte:window bind:scrollY bind:innerHeight bind:innerWidth />

@@ -1,18 +1,9 @@
-<script context="module" lang="ts">
-    export type StepT = {
-        name: string;
-        icon: string;
-        text: string;
-        tech_stack: string;
-        link?: string;
-    };
-</script>
-
 <script lang="ts">
-    export let step: StepT;
+    import { type Project } from "../data/models";
+    export let project: Project;
 </script>
 
-{#if step.link === undefined}
+{#if project.link === undefined}
     <div
         class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center
         group hover:border-violet-400 duration-200"
@@ -20,21 +11,28 @@
         <div
             class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
         >
-            <i class={step.icon} />
+            <i class={project.icon} />
         </div>
         <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">
-            {step.name}
+            {project.name}
         </h3>
-        <p>
-            {step.text}
+        <p class="px-2">
+            {project.text}
         </p>
         <p>
-            <strong class="text-violet-400">{step.tech_stack}</strong>
+            <strong class="text-violet-400">{project.tech_stack}</strong>
         </p>
+        <div class="flex-1 flex justify-betweeen gap-4 items-end">
+            <div
+                class="ml-auto py-1 px-2 rounded-md duration-200 relative overflow-hidden"
+            >
+                <p class="z-4 text-slate-300">Not Available</p>
+            </div>
+        </div>
     </div>
 {:else}
     <a
-        href={step.link}
+        href={project.link}
         target="_blank"
         class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center
         cursor-pointer group hover:border-violet-400 duration-200"
@@ -42,16 +40,16 @@
         <div
             class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
         >
-            <i class={step.icon} />
+            <i class={project.icon} />
         </div>
         <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">
-            {step.name}
+            {project.name}
         </h3>
-        <p>
-            {step.text}
+        <p class="px-2">
+            {project.text}
         </p>
         <p>
-            <strong class="text-violet-400">{step.tech_stack}</strong>
+            <strong class="text-violet-400">{project.tech_stack}</strong>
         </p>
         <div class="flex-1 flex justify-betweeen gap-4 items-end">
             <div

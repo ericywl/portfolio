@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { myGithub, myLinkedin } from "./data";
+    import { myGithub, myLinkedin } from "../data/links";
 </script>
 
 <footer

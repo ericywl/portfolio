@@ -1,67 +1,8 @@
-<script context="module" lang="ts">
-    type BenefitT = {
-        name: string;
-        description: string;
-    };
-</script>
-
 <script lang="ts">
-    import Step from "./Step.svelte";
-    import { type StepT } from "./Step.svelte";
     import { onMount } from "svelte";
-
-    let github: string = "https://github.com/ericywl";
-
-    let steps: StepT[] = [
-        {
-            name: "Zero2Prod Newsletter",
-            icon: "fa-solid fa-envelope",
-            text: "Email newsletter publishing and subscription, deployed on DigitalOcean",
-            tech_stack: "Rust, Axum, PostgreSQL",
-            link: github + "/zero2prod",
-        },
-        {
-            name: "NVIDIA AIRA",
-            icon: "fa-solid fa-brain",
-            text: "AI Research Assistant prototype that provides research article searching and summarization, in collaboration with NVAITC",
-            tech_stack: "Python, Django",
-        },
-        {
-            name: "Photon Ray Tracer",
-            icon: "fa-solid fa-lightbulb",
-            text: "Offline ray tracing with photon mapping using indirect illumination in Computer Graphics",
-            tech_stack: "C++ 11",
-            link: github + "/photon-rt",
-        },
-        {
-            name: "Archwing",
-            icon: "fa-solid fa-plane",
-            text: "Dummy Ethereum dApp that manages flight delay insurance for travellers",
-            tech_stack: "Solidity, Truffle, Ganache",
-            link: "https://github.com/causztic/archwing",
-        },
-    ];
-
-    let benefits: BenefitT[] = [
-        {
-            name: "A curious developer",
-            description:
-                "I deeply enjoy problem solving and am curious about how things work under-the-hood, especially the tools I use in my craft. " +
-                "This curiosity has helped me identify bottlenecks and optimizations in my work that helped greatly improve the end users' experience.",
-        },
-        {
-            name: "A detail-oriented individual",
-            description:
-                "From documentation to discussions, I am always attentive to the details of each task I perform. " +
-                "I am organized and observant in my work, and have received praise for my detail-oriented skills from my managers.",
-        },
-        {
-            name: "A great communicator",
-            description:
-                "Communication is key and it's a paramount value of mine. I believe in transparency and constructive communication above all else. " +
-                "This helps me develop deep relationships and ensures my effectiveness and productivity in any workspace with any team.",
-        },
-    ];
+    import Card from "./Card.svelte";
+    import { projects, benefits, work } from "../data/portfolio";
+    import { myGithub } from "$lib/data/links";
 
     async function sleep(ms: number): Promise<void> {
         return new Promise((resolve) => setTimeout(resolve, ms));
@@ -148,7 +89,7 @@
             </h3>
         </div>
         <a
-            href={github}
+            href={myGithub}
             target="_blank"
             class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10
             hover:border-violet-700 hover:bg-gradient-to-r hover:bg-clip-text hover:text-transparent
@@ -157,11 +98,15 @@
             <i class="fa-brands fa-github"></i>
             <p>Head to GitHub</p>
         </a>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">
-            <Step step={steps[0]} />
-            <Step step={steps[1]} />
-            <Step step={steps[2]} />
-            <Step step={steps[3]} />
+        <div class="grid grid-cols-1 gap-12 lg:gap-10 -mb-12">
+            <Card project={work} />
+        </div>
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-x-10 lg:gap-y-14"
+        >
+            {#each projects as project}
+                <Card {project} />
+            {/each}
         </div>
     </section>
 
